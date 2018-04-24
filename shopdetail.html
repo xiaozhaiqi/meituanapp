@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/public.css">
+	<script src="js/rem.js"></script>
+	<style>
+		body{
+			background-color: #F4F4F4;
+		}
+		header{
+			width: 100%;
+			height: 3.87rem;
+			position: relative;
+		}
+		header img{
+			width: 100%;
+			height: 3.87rem;
+		}
+		.close{
+			width: 0.45rem;
+			height: 0.45rem;
+			background-color: rgba(0, 0, 0, 0.5);
+			border-radius: 50%;
+			position: absolute;
+			top: 0.15rem;
+			left: 0.15rem;
+		}
+		.do{
+			width: 0.45rem;
+			height: 0.45rem;
+			background-color: rgba(0, 0, 0, 0.5);
+			border-radius: 50%;
+			position: absolute;
+			top: 0.15rem;
+			right: 0.77rem;
+		}
+		.more{
+			width: 0.45rem;
+			height: 0.45rem;
+			background-color: rgba(0, 0, 0, 0.5);
+			border-radius: 50%;
+			position: absolute;
+			top: 0.15rem;
+			right: 0.15rem;
+		}
+		.close em,.do em,.more em{
+			display: block;
+			font-size: 0.24rem;
+			text-align: center;
+			line-height: 0.45rem;
+			color: #fff;
+			font-family: 'iconfont';
+		}
+		section{
+			width: 100%;
+			height: auto;
+			padding: 0 0.15rem;
+			overflow: hidden;
+			background-color: #fff;
+			padding-top:0.27rem;
+			padding-bottom: 0.2rem;
+		}
+		section h1{
+			font-size: 0.22rem;
+			float: left;
+		}
+		section p{
+			float: right;
+			font-size: 0.2rem;
+			color: #999;
+		}
+		section em{
+			font-size: 0.25rem;
+			float: right;
+			color: #999;
+			font-family: 'iconfont';
+			margin-right: 0.11rem;
+		}
+		section h2{
+			font-size: 0.18rem;
+			color: #ccc;
+			float: left;
+			width: 100%;
+			margin-top: 0.14rem;
+		}
+		.biaoqian{
+			width: 100%;
+			height: 0.19rem;
+			margin-top: 0.1rem;
+			float: left;
+		}
+		.lijian,.new{
+			width: 0.37rem;
+			height: 0.17rem;
+			border: 0.01rem solid #FA7070;
+			color: #FA7070;
+			text-align: center;
+			line-height: 0.17rem;
+			border-right: none;
+			font-size: 0.12rem;
+			float: left;
+		}
+		.new{
+			border-color: #22C56C;
+			margin-left: 0.08rem;
+			color: #22C56C;
+		}
+		.left{
+			width: 1.18rem;
+			height: auto;
+			overflow: hidden;
+			float: left;
+		}
+		.left p{
+			font-size: 0.26rem;
+			color: #FB4E44;
+			float: left;
+		}
+		.left p em{
+			font-size: 0.14rem;
+			color: #999;
+			text-decoration-line: line-through;
+			margin-top: 0.14rem;
+			float: right;
+			margin-left: 0.12rem;
+		}
+		.left h3{
+			font-size: 0.14rem;
+			color: #FB4E44;
+			float: left;
+		}
+		.left span{
+			font-size: 0.16rem;
+			font-family: 'iconfont';
+			float: left;
+			margin-right: 0.1rem;
+		}
+		.shop{
+			width: 1.68rem;
+			height: 0.42rem;
+			background-color: #FFD161;
+			color: #000;
+			float: right;
+			font-size: 0.24rem;
+			border-radius: 0.42rem;
+		}
+		.shop em{
+			font-family: 'iconfont';
+			font-size: 0.24rem;
+			float: left;
+			line-height: 0.42rem;
+			margin-left: 0.15rem;
+		}
+		.shop p{
+			line-height: 0.42rem;
+			float: left;
+		}
+		.in{
+			width: 100%;
+			height: 1.35rem;
+			background-color: #fff;
+			border-top: 0.01rem solid #F2F2F2;
+			padding-top: 0.3rem;
+			padding-left: 0.2rem;
+		}
+		.in h2{
+			font-size: 0.2rem;
+			color: #ccc;
+			float: left;
+			width: 100%;
+		}
+		.in p{
+			font-size: 0.2rem;
+			color: #737373;
+			float: left;
+			margin-top: 0.2rem;
+		}
+		.pin{
+			width: 100%;
+			height: 0.73rem;
+			background-color: #fff;
+			margin-top: 0.18rem;
+			font-size: 0.18rem;
+			line-height: 0.73rem;
+			color: #333;
+			padding-left: 0.2rem;
+		}
+		.pin span{
+			color: #ccc;
+			float: right;
+			padding-right: 0.25rem;
+		}
+		.bar{
+			width: 100%;
+			height: 0.75rem;
+			background-color: #3F3F3F;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+		}
+		.yuan{
+			width: 0.75rem;
+			height: 0.75rem;
+			border-radius: 50%;
+			background-color: #888888;
+			position: absolute;
+			top: -0.15rem;
+			left: 0.15rem;
+		}
+		.yuan em{
+			text-align: center;
+			line-height: 0.75rem;
+			font-family: 'iconfont';
+			color: #DEDEDE;
+			font-size: 0.4rem;
+			display: block;
+		}
+		.bar p,.bar span{
+			font-size: 0.2rem;
+			line-height: 0.75rem;
+			float: left;
+			color: #DEDEDE;
+			margin-left: 1.09rem;
+		}
+		.bar span{
+			float: right;
+			margin-right: 0.38rem;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="img/Screenshot_2018-04-17-15-12-00-14_03.png" alt="">
+		<a href="shopcar.html">
+			<div class="close">
+				<em>&#xe61f;</em>
+			</div>
+		</a>
+		<div class="do">
+			<em>&#xe7b8;</em>
+		</div>
+		<div class="more">
+			<em>&#xe61c;</em>
+		</div>
+	</header>
+	<section>
+		<h1>芒果班戟（1粒状）</h1>
+		<p>联系商家</p>
+		<em>&#xe636;</em>
+		<h2>月售5</h2>
+		<div class="biaoqian">
+			<div class="lijian">力荐</div>
+			<div class="new">新品</div>
+		</div>
+		<div class="left">
+			<p>￥9.9 <em>￥16</em></p>
+			<h3><span>&#xe794;</span>6.19折 限1份</h3>
+		</div>
+		<div class="shop">
+			<em>&#xe6af;</em>
+			<p>加入购物车</p>
+		</div>
+	</section>
+	<div class="in">
+		<h2>商品信息</h2>
+		<p>试吃装，让您从此爱上甜品</p>
+	</div>
+	<div class="pin">外卖评价<span>暂无</span></div>
+	<div class="bar">
+		<div class="yuan">
+			<em>&#xe6af;</em>
+		</div>
+		<p>另需配送费￥3</p>
+		<span>￥20起送</span>
+	</div>
+</body>
+</html>

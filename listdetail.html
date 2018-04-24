@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/public.css">
+	<script src="js/rem.js"></script>
+	<style>
+		header{
+			width: 100%;
+			height: 0.72rem;
+			padding: 0 0.15rem;
+		}
+		header em{
+			font-size: 0.27rem;
+			font-family: 'iconfont';
+			float: left;
+			margin-left: 0.08rem;
+			line-height: 0.72rem;
+			color: #686868;
+		}
+		header h1{
+			font-size: 0.32rem;
+			text-align: center;
+			color: #FF5B59;
+			line-height: 0.72rem;
+		}
+		input{
+			width: 5.1rem;
+			height: 0.45rem;
+			margin-left: 0.15rem;
+			background-color: #E7E7E7;
+			float: left;
+			border: none;
+			outline: none;
+			border-radius: 0.02rem;
+			font-size: 0.2rem;
+			padding-left: 0.47rem;
+			color: #999;
+			line-height: 0.45rem;
+		}
+		.search{
+			font-family: 'iconfont';
+			font-size: 0.2rem;
+			color: #999;
+			position: absolute;
+			left: 0.33rem;
+			top: 0.84rem;
+		}
+		.hot{
+			width: 100%;
+			height: 0.75rem;
+			padding: 0 0.15rem;
+			padding-top: 0.15rem;
+			float: left;
+		}
+		h2{
+			font-size: 0.18rem;
+			color: #FFCECD;
+			float: left;
+			line-height: 0.3rem;
+		}
+		.hot_name{
+			width: 0.76rem;
+			height: 0.3rem;
+			background-color: #F6F6F6;
+			text-align: center;
+			line-height: 0.3rem;
+			color:#666;
+			font-size:0.16rem;
+			float: left;
+			margin-left: 0.15rem;
+		}
+		.img{
+			width: 100%;
+			height: 3.14rem;
+			padding: 0 0.15rem;
+		}
+		.img1{
+			width: 1.87rem;
+			height: 3.14rem;
+			float: left;
+		}
+		.img_right{
+			width: 3.15rem;
+			height: 100%;
+			float: left;
+			margin-left: 0.08rem;
+		}
+		.img_right img{
+			width: 3.15rem;
+			height: 1.53rem;
+			float: left;
+		}
+		.img2{
+			margin-top: 0.08rem;
+			float: left;
+		}
+		.lists{
+			width: 100%;
+			height: 1.15rem;
+			border-bottom: 0.01rem solid #ccc;
+			float: left;
+			margin-top: 0.3rem;
+			padding-bottom: 0.12rem;
+			padding-left: 0.15rem;
+		}
+		.list{
+			width: 100%;
+			height: 1.15rem;
+			overflow-x: scroll;
+			display: flex;
+		}
+		.head{
+			width: 0.77rem;
+			height: 0.77rem;
+			margin-right: 0.26rem;
+		}
+		.head img{
+			width: 0.77rem;
+			height: 0.77rem;
+			float: left;
+		}
+		.head h3{
+			text-align: center;
+			font-size: 0.18rem;
+			color: #FFB000;
+			margin-top: 0.12rem;
+		}
+		.head1 h3{
+			color: #333;
+		}
+		.pro{
+			width: 0.3rem;
+			height: 0.01rem;
+			background-color: #FFB000;
+			margin: 0 auto;
+			margin-top: 0.11rem;
+		}
+				.fujin{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+		}
+		.fujin_title{
+			width: 100%;
+			height: 0.66rem;
+			padding: 0 0.26rem;
+			position: relative;
+		}
+		#fujin_list{
+			color: #000;
+		}
+		.fujin_title li{
+			height: 0.66rem;
+			float: left;
+			color: #999;
+			margin-right: 0.3rem;
+
+		}
+		.fujin_title li span{
+			font-size: 0.2rem;
+			line-height: 0.66rem;
+			float: left;
+		}
+		.fujin_title li em{
+			font-family: 'iconfont';
+			color: #999;
+			font-size: 0.2rem;
+			line-height: 0.66rem;
+			float: left;
+			margin-left: 0.04rem;
+		}
+		
+		.fujin_title li:nth-child(3){
+			margin-right: 0.3rem;
+		}
+		.fujin_title li:nth-child(4){
+			float: right;
+			margin-right: 0;
+			padding-left: 0.3rem;
+
+		}
+		.fujin_bottom{
+			float: left;
+			padding: 0 0.16rem;
+		}
+		.fujin_bottom li{
+			margin-top: 0.3rem;
+			overflow: hidden;
+		}
+		.fujin_bottom li:first-child{
+			margin-top: 0;
+		}
+		.fujin_bottom li img{
+			width: 1.14rem;
+			height: 0.86rem;
+			float: left;
+		}
+		.fujin_right{
+			width: 3.9rem;
+			height: 100%;
+			float: right;
+		}
+		.fujin_right h4{
+			font-size: 0.22rem;
+			float: left;
+			color: #333;
+		}
+		.more{
+			float: right;
+			font-family: 'iconfont';
+			font-size: 0.22rem;
+			color: #ccc;
+			line-height: 0.3rem;
+			margin-left: 0.37rem;
+		}
+		.star{
+			font-size: 0.14rem;
+			color: #FFD161;
+			font-family: 'iconfont';
+			float: left;
+		}
+		.star_leavel{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+		}
+		.yue{
+			font-size: 0.17rem;
+			color: #999;
+			float: left;
+			margin-left: 0.12rem;
+		}
+		.lu{
+			font-size: 0.17rem;
+			color: #999;
+			float: right;
+		}
+		.peisong{
+			width: 100%;
+			font-size: 0.17rem;
+			color: #999;
+			float: left;
+		}
+		.tian{
+			width: 100%;
+			float: left;
+			font-size: 0.17rem;
+			line-height: 0.45rem;
+			color: #333;
+		}
+		.tian em{
+			float: left;
+			font-family: 'iconfont';
+			font-size: 0.16rem;
+			color: #999;
+		}
+		.count{
+			width: 100%;
+			height: 0.22rem;
+			float: left;
+		}
+		.zhe{
+			width: 0.67rem;
+			height: 0.2rem;
+			border: 0.02rem solid #FDE0DF;
+			color:#FB4E44;
+			text-align: center;
+			line-height: 0.15rem;
+			font-size: 0.12rem; 
+			float: left;
+			margin-right: 0.07rem;
+		}
+		.shop{
+			width: 0.58rem;
+			height: 0.58rem;
+			border-radius: 50%;
+			border: 0.01rem solid #ccc;
+			position: fixed;
+			right: 0.21rem;
+			bottom: 1.05rem; 
+			font-size: 0.27rem;
+			color: #333;
+			line-height: 0.58rem;
+			text-align: center;
+			font-family: 'iconfont';
+			background-color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="list.html"><em>&#xe678;</em></a>
+		<h1>美食</h1>
+	</header>
+	<input type="text" placeholder="请输入商家或商品名称">
+	<em class="search">&#xe78d;</em>
+	<div class="hot">
+		<h2>HOT</h2>
+		<div class="hot_name">麻辣拌</div>
+		<div class="hot_name">麻辣香锅</div>
+		<div class="hot_name">烧烤</div>
+		<div class="hot_name">米线</div>
+		<div class="hot_name">焖面</div>
+	</div>
+	<div class="img">
+		<img src="img/Screenshot_2018-04-20-17-04-47-91_03.png" alt="" class="img1">
+		<div class="img_right">
+			<img src="img/Screenshot_2018-04-20-17-04-47-91_05.png" alt="">
+			<img src="img/Screenshot_2018-04-20-17-04-47-91_08.png" alt="" class="img2">
+		</div>
+	</div>
+	<div class="lists">
+		<ul class="list">
+			<li class="head">
+				<img src="img/Screenshot_2018-04-20-17-04-47-91_12.png" alt="">
+				<h3>全部</h3>
+				<div class="pro"></div>
+			</li>
+			<li class="head head1">
+				<img src="img/Screenshot_2018-04-20-17-04-47-91_15.png" alt="">
+				<h3>快餐便当</h3>
+			</li>
+			<li class="head head1">
+				<img src="img/Screenshot_2018-04-20-17-04-47-91_18.png" alt="">
+				<h3>汉堡薯条</h3>
+			</li>
+			<li class="head head1">
+				<img src="img/Screenshot_2018-04-20-17-04-47-91_20.png" alt="">
+				<h3>意面披萨</h3>
+			</li>
+			<li class="head head1">
+				<img src="img/Screenshot_2018-04-20-17-04-47-91_22.png" alt="">
+				<h3>包子粥店</h3>
+			</li>
+			<li class="head head1">
+				<img src="img/Screenshot_2018-04-20-17-04-47-91_15.png" alt="">
+				<h3>快餐便当</h3>
+			</li>
+			<li class="head head1">
+				<img src="img/Screenshot_2018-04-20-17-04-47-91_18.png" alt="">
+				<h3>汉堡薯条</h3>
+			</li>
+			<li class="head head1">
+				<img src="img/Screenshot_2018-04-20-17-04-47-91_20.png" alt="">
+				<h3>意面披萨</h3>
+			</li>
+			<li class="head head1">
+				<img src="img/Screenshot_2018-04-20-17-04-47-91_22.png" alt="">
+				<h3>包子粥店</h3>
+			</li>
+		</ul>
+	</div>
+	<section class="fujin">
+		<ul class="fujin_title">
+			<li id="fujin_list">
+				<span>综合排序</span>
+				<em>&#xe635;</em>
+			</li>
+			<li>
+				<span>销量</span>
+			</li>
+			<li>
+				<span>距离</span>
+			</li>
+			<li>
+				<span>筛选</span>
+				<em>&#xe616;</em>
+			</li>
+		</ul>
+		<ul class="fujin_bottom">
+			<li>
+				<img src="img/Screenshot_2018-04-17-15-12-00-14_03.png" alt="">
+				<div class="fujin_right">
+					<h4>芒不颠千层蛋糕甜品店（长风...</h4>
+					<em class="more">&#xe679;</em>
+					<div class="star_leavel">
+						<em class="star">&#xe698;&#xe698;&#xe698;&#xe698;&#xe698;</em>
+						<span class="yue">月售407</span>
+						<span class="lu">54分钟|1.3km</span>
+					</div>
+					<span class="peisong">起送 ￥20 | 配送 ￥3</span>
+					<span class="tian">
+						<em>&#xe601;</em>&nbsp;甜品
+					</span>
+					<div class="count">
+						<div class="zhe">4.95折起</div>
+						<div class="zhe">返3元券</div>
+						<div class="zhe">首单减13元</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-15-12-00-14_03.png" alt="">
+				<div class="fujin_right">
+					<h4>芒不颠千层蛋糕甜品店（长风...</h4>
+					<em class="more">&#xe679;</em>
+					<div class="star_leavel">
+						<em class="star">&#xe698;&#xe698;&#xe698;&#xe698;&#xe698;</em>
+						<span class="yue">月售407</span>
+						<span class="lu">54分钟|1.3km</span>
+					</div>
+					<span class="peisong">起送 ￥20 | 配送 ￥3</span>
+					<span class="tian">
+						<em>&#xe601;</em>&nbsp;甜品
+					</span>
+					<div class="count">
+						<div class="zhe">4.95折起</div>
+						<div class="zhe">返3元券</div>
+						<div class="zhe">首单减13元</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-15-12-00-14_03.png" alt="">
+				<div class="fujin_right">
+					<h4>芒不颠千层蛋糕甜品店（长风...</h4>
+					<em class="more">&#xe679;</em>
+					<div class="star_leavel">
+						<em class="star">&#xe698;&#xe698;&#xe698;&#xe698;&#xe698;</em>
+						<span class="yue">月售407</span>
+						<span class="lu">54分钟|1.3km</span>
+					</div>
+					<span class="peisong">起送 ￥20 | 配送 ￥3</span>
+					<span class="tian">
+						<em>&#xe601;</em>&nbsp;甜品
+					</span>
+					<div class="count">
+						<div class="zhe">4.95折起</div>
+						<div class="zhe">返3元券</div>
+						<div class="zhe">首单减13元</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<div class="shop">&#xe6af;</div>
+</body>
+</html>

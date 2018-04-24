@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet"href="css/public.css">
+	<script src="js/rem.js"></script>
+	<style>
+		body{
+			background-color:#F4F4F4;
+		}
+		header{
+			width:100%;
+			height:0.67rem;
+			background-color:#fff;
+			border-bottom:0.01rem solid #E5E5E5;
+			position:fixed;
+			top:0;
+			left:0;
+		}
+		.return{
+			font-size:0.26rem;
+			font-family:'iconfont';
+			color:#999;
+			float:left;
+			margin-left:0.22rem;
+			line-height:0.67rem;
+		}
+		.search{
+			font-size: 0.21rem;
+			color: #8E8E8E;
+			position: absolute;
+			font-family: 'iconfont';
+			top: 0.23rem;
+			left: 0.8rem;
+		}
+		section{
+			width:100%;
+			height:auto;
+			overflow:hidden;
+		}
+		input{
+			width: 4.56rem;
+			height: 0.45rem;
+			background-color: #F3F3F3;
+			float: left;
+			outline: none;
+			border: none;
+			margin-left: 0.22rem;
+			margin-top: 0.11rem;
+			padding-left: 0.49rem;
+			color: #ccc;
+			font-size: 0.2rem;
+		}
+		.list{
+			width:1.35rem;
+			height:8.27rem;
+			background-color:#fff;
+			float:left;
+			margin-top:0.68rem;
+			overflow-y: scroll; 
+		}
+		.list li{
+			width:100%;
+			height:0.68rem;
+			color:#000;
+			line-height:0.68rem;
+			font-size:0.21rem;
+			padding-left:0.23rem;
+		}
+		li.active{
+			background-color:#F4F4F4;
+		}
+		.right{
+			width:3.77rem;
+			height: 8.7rem;
+			overflow-y: scroll;
+			position: fixed;
+			right: 0.15rem;
+			top: 0.69rem;
+		}
+		.title{
+			width: 3.77rem;
+			height: 0.68rem;
+			float: right;
+			position: fixed;
+			top: 0.67rem;
+			right: 0.15rem;
+			background-color: #f4f4f4;
+		}
+		.title1{
+			width: 3.77rem;
+			height: 0.68rem;
+			float: right;
+			background-color: #f4f4f4;
+		}
+		.title h2,.title1 h2{
+			font-size: 0.21rem;
+			float: left;
+			line-height: 0.68rem;
+		}
+		.title span,.title1 span{
+			float: right;
+			line-height: 0.68rem;
+			color: #ccc;
+			font-size: 0.21rem;
+		}
+		.title span em,.title1 span em{
+			float: right;
+			font-family: "iconfont";
+		}
+		.content{
+			width:3.77em;
+			height:auto;
+			overflow:hidden;
+			float:left;
+			background-color:#fff;
+			padding-top: 0.12rem;
+			padding-bottom: 0.27rem;
+			margin-top: 0.68rem;
+		}
+		.content li{
+			width: 1.24rem;
+			height: 1.48rem;
+			float: left;
+		}
+		.content li img{
+			width: 1.24rem;
+			height: 0.46rem;
+			float: left;
+			margin-top: 0.27rem;
+		}
+		.all{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+		}
+		h3{
+			font-size: 0.18rem;
+			text-align: center;
+			margin-top: 0.24rem;
+		}
+		.count{
+			width: 0.5rem;
+			height: 0.23rem;
+			margin: 0 auto;
+			font-size: 0.12rem;
+			color: #999;
+			text-align: center;
+			line-height: 0.23rem;
+			background-color: #F3F3F3;
+			margin-top: 0.1rem;
+			border-radius: 50%;
+		}
+		.content1{
+			margin-top: 0;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="index.html"><em class="return">&#xe65c;</em></a>
+		<input type="text" placeholder="米线">
+		<em class="search">&#xe78d;</em>
+	</header>
+	<ul class="list">
+			<li class="active">美食</li>
+			<li>美团专送</li>
+			<li>甜点饮品</li>
+			<li>早餐</li>
+			<li>正餐优选</li>
+			<li>夜宵</li>
+			<li>家常菜</li>
+			<li>能量西餐</li>
+			<li>小吃馆</li>
+			<li>快食简餐</li>
+			<li>异国料理</li>
+			<li>鲜花蛋糕</li>
+	</ul>
+	<div class="right">
+		<div class="title">
+			<h2>美食（1472）</h2>
+			<span>
+				<em>&#xe614;</em>	
+				<em class="more">去频道</em>
+			</span>
+		</div>
+		<ul class="content">
+			<a href="listdetail.html">
+				<li>
+					<img src="img/Screenshot_2018-04-17-17-35-23-53_03.png" alt="">
+					<div class="all">
+						<h3>全部</h3>
+						<div class="count">1472</div>
+					</div>
+				</li>
+			</a>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_04.png" alt="">
+				<div class="all">
+					<h3>快餐便当</h3>
+					<div class="count">739</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_05.png" alt="">
+				<div class="all">
+					<h3>米粉面馆</h3>
+					<div class="count">173</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_03.png" alt="">
+				<div class="all">
+					<h3>全部</h3>
+					<div class="count">1472</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_04.png" alt="">
+				<div class="all">
+					<h3>快餐便当</h3>
+					<div class="count">739</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_05.png" alt="">
+				<div class="all">
+					<h3>米粉面馆</h3>
+					<div class="count">173</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_03.png" alt="">
+				<div class="all">
+					<h3>全部</h3>
+					<div class="count">1472</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_04.png" alt="">
+				<div class="all">
+					<h3>快餐便当</h3>
+					<div class="count">739</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_05.png" alt="">
+				<div class="all">
+					<h3>米粉面馆</h3>
+					<div class="count">173</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_03.png" alt="">
+				<div class="all">
+					<h3>全部</h3>
+					<div class="count">1472</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_04.png" alt="">
+				<div class="all">
+					<h3>快餐便当</h3>
+					<div class="count">739</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_05.png" alt="">
+				<div class="all">
+					<h3>米粉面馆</h3>
+					<div class="count">173</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_03.png" alt="">
+				<div class="all">
+					<h3>全部</h3>
+					<div class="count">1472</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_04.png" alt="">
+				<div class="all">
+					<h3>快餐便当</h3>
+					<div class="count">739</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_05.png" alt="">
+				<div class="all">
+					<h3>米粉面馆</h3>
+					<div class="count">173</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_03.png" alt="">
+				<div class="all">
+					<h3>全部</h3>
+					<div class="count">1472</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_04.png" alt="">
+				<div class="all">
+					<h3>快餐便当</h3>
+					<div class="count">739</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_05.png" alt="">
+				<div class="all">
+					<h3>米粉面馆</h3>
+					<div class="count">173</div>
+				</div>
+			</li>
+		</ul>
+		<div class="title1">
+			<h2>美团专送（432）</h2>
+			<span>
+				<em>&#xe614;</em>	
+				<em class="more">去频道</em>
+			</span>
+		</div>
+		<ul class="content content1">
+		<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_03.png" alt="">
+				<div class="all">
+					<h3>全部</h3>
+					<div class="count">1472</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_04.png" alt="">
+				<div class="all">
+					<h3>快餐便当</h3>
+					<div class="count">739</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_05.png" alt="">
+				<div class="all">
+					<h3>米粉面馆</h3>
+					<div class="count">173</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_03.png" alt="">
+				<div class="all">
+					<h3>全部</h3>
+					<div class="count">1472</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-17-35-23-53_04.png" alt="">
+				<div class="all">
+					<h3>快餐便当</h3>
+					<div class="count">739</div>
+				</div>
+			</li>
+		</ul>		
+	</div>
+</body>
+</html>

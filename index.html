@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>美团app</title>
+	<link rel="stylesheet" href="css/public.css">
+	<script src="js/rem.js"></script>
+	<style>
+		header{
+			width: 100%;
+			height: 1.28rem;
+			background:-webkit-linear-gradient(#FFC43D,#FFC53F);
+			position: relative;
+			padding: 0 0.15rem;
+		}
+		.header_top{
+			width: 100%;
+			height: 0.63rem;
+			font-weight: bold;
+		}
+		.dingwei{
+			font-family: 'iconfont';
+			font-size: 0.24rem;
+			margin-top: 0.21rem;
+			float: left;
+			color: #333;
+		}
+		.position{
+			font-size: 0.2rem;
+			float: left;
+			margin-top: 0.2rem;
+			color: #333;
+			margin-left: 0.21rem;
+		}
+		.right{
+			font-family: 'iconfont';
+			font-size: 0.13rem;
+			margin-top: 0.26rem;
+			margin-left: 0.09rem;
+			float: left;
+			color: #333;
+		}
+		.message{
+			font-size: 0.29rem;
+			color: #333;
+			float: right;
+			font-family: 'iconfont';
+			margin-top: 0.19rem;
+		}
+		.sun{
+			font-size: 0.29rem;
+			color: #333;
+			margin-top: 0.19rem;
+			float: right;
+			margin-right: 0.28rem;
+			font-family: 'iconfont';
+		}
+		.weather{
+			float: right;
+			width: 0.3rem;
+			margin-top: 0.19rem;
+		}
+		.weather_word,.wendu{
+			text-align: center;
+			color: #333;
+			font-size: 0.16rem;
+			float: left;
+		}
+		.wendu{
+			float: right;
+			margin-right: 0.05rem;
+		}
+		input{
+			width: 100%;
+			height: 0.5rem;
+			background-color: #fff;
+			border-radius: 0.05rem;
+			float: left;
+			border: none;
+			outline: none;
+			font-size: 0.18rem;
+			color: #ccc;
+			padding-left: 0.36rem;
+		}
+		.search{
+			font-size: 0.18rem;
+			color: #999;
+			position: absolute;
+			font-family: 'iconfont';
+			left: 0.26rem;
+			bottom: 0.31rem;
+		}
+		.banner,.banner img{
+			width: 100%;
+			height: 1.5rem;
+		}
+		.list{
+			width: 100%;
+			height: 2.85rem;
+			padding-top: 0.26rem;
+		}
+		.list li{
+			width: 1.08rem;
+			height: 1.23rem;
+			overflow: hidden;
+			float: left;
+		}
+		.list li img{
+			display: block;
+			width: 0.66rem;
+			height: 0.66rem;
+			margin: 0 auto;
+		}
+		.list_word{
+			display: block;
+			font-size: 0.17rem;
+			color: #333;
+			text-align: center;
+			margin-top: 0.12rem;
+		}	
+		.youhui{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			padding: 0 0.15rem;
+		}
+		h1{
+			font-size: 0.28rem;
+			color: #333;
+			line-height: 0.62rem;
+		}
+		.youhui img{
+			width: 2.51rem;
+			height: 1.56rem;
+			float: left;
+		}
+		.youhui img:nth-child(3){
+			margin-left: 0.08rem;
+		}
+		.youhui img:nth-child(4),.youhui img:nth-child(5),.youhui img:nth-child(6),.youhui img:nth-child(7){
+			width: 1.21rem;
+			height: 1.56rem;
+			float: left;
+			margin-top: 0.08rem;
+		}
+		.youhui img:nth-child(5),.youhui img:nth-child(6),.youhui img:nth-child(7){
+			margin-left: 0.08rem;
+		}
+		.youxuan{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			padding: 0 0.15rem;
+			margin-top: 0.35rem;
+		}
+		.youxuan_title{
+			float: left;
+		}
+		h2{
+			font-size: 0.2rem;
+			float: right;
+			margin-top: 0.25rem;
+		}
+		.right1{
+			float: right;
+			line-height: 0.2rem;
+			color: #333;
+		}
+		.youxuan_box{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+		}
+		.youxuan img{
+			width: 2.47rem;
+			height: 1.54rem;
+			float: left;
+		}
+		.youxuan p{
+			display: block;
+			font-size: 0.16rem;
+			color: #ccc;
+			line-height: 0.46rem;
+			margin-left: 0.17rem;
+		}
+		.youxuan_box li:nth-child(2n){
+			margin-left: 0.15rem;
+		}
+		.youxuan_box li{
+			width: 2.47rem;
+			height: 2rem;
+			float: left;
+		}
+		.middle{
+			width: 100%;
+			height: 3.43rem;
+			margin-top: 0.16rem;
+		}
+		.middle img{
+			width: 100%;
+			height: 3.43rem;
+		}
+		.self{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			margin-top: 0.1rem;
+			padding: 0 0.15rem;
+		}
+		h3{
+			font-size: 0.28rem;
+			float: left;
+			line-height: 0.91rem;
+		}
+		.self_title{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+		}
+		.self_wenzi{
+			font-size: 0.18rem;
+			color: #999;
+			float: left;
+			line-height: 0.91rem;
+			margin-left: 0.1rem;
+		}
+		.self_list{
+			width: 100%;
+			height: 1.14rem;
+			display: flex;
+			overflow-x: scroll; 
+		}
+		.self_list li{
+			width: 3.76rem;
+			height: 1.14rem;
+			background: url('img/Screenshot_2018-04-17-15-11-50-68_05.png') no-repeat;
+			background-size: 1.14rem 1.14rem;
+			background-position: left;
+		}
+		.self_content{
+			width: 2.02rem;
+			height: 1.14rem;
+			float: left;
+			margin-left: 1.29rem;
+		}
+		h4{
+			font-size: 0.23rem;
+			line-height: 0.5rem;
+			color: #333;
+			float: left;
+		}
+		.juli{
+			width: 0.83rem;
+			height: 0.2rem;
+			background-color: #FFD161;
+			float: left;
+			font-size: 0.15rem;
+			line-height: 0.2rem;
+			text-align: center;
+		}
+		.juli1{
+			width: 1.11rem;
+			height: 0.2rem;
+			line-height: 0.2rem;
+			font-size: 0.15rem;
+			float: left;
+			text-align: center;
+			margin-left: 0.08rem;
+			background-color: #FFF6DF;
+			color: #FF9F00;
+		}
+		.jian{
+			width: 0.23rem;
+			height: 0.23rem;
+			background-color: #FF625A;
+			color: #fff;
+			text-align: center;
+			line-height: 0.23rem;
+			float: left;
+			margin-right: 0.08rem;
+			font-size: 0.16rem;
+			margin-top: 0.12rem;
+		}
+		.jian1{
+			background-color: #C581E6;
+		}
+		.jian2{
+			background-color: #FF7299;
+		}
+		.jian3{
+			background-color: #F94547;
+		}
+		.jian4{
+			background-color: #FFA621;
+		}
+		.fujin{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+		}
+		h5{
+			color: #333;
+			padding: 0 0.16rem;
+			font-size: 0.28rem;
+			margin-top: 0.35rem;
+		}
+		.fujin_title{
+			width: 100%;
+			height: 0.66rem;
+			padding: 0 0.26rem;
+			position: relative;
+		}
+		#fujin_list{
+			color: #000;
+		}
+		.fujin_title li{
+			height: 0.66rem;
+			float: left;
+			color: #999;
+			margin-right: 0.5rem;
+		}
+		.fujin_title li span{
+			font-size: 0.2rem;
+			line-height: 0.66rem;
+			float: left;
+		}
+		.fujin_title li em{
+			font-family: 'iconfont';
+			color: #999;
+			font-size: 0.2rem;
+			line-height: 0.66rem;
+			float: left;
+			margin-left: 0.04rem;
+		}
+		
+		.fujin_title li:nth-child(3){
+			margin-right: 0.3rem;
+		}
+		.fujin_title li:nth-child(4){
+			margin-right: 0;
+			padding-left: 0.3rem;
+
+		}
+		.fujin_title:after{
+			content: "";
+			width: 0.01rem;
+			height: 0.24rem;
+			background-color: #ccc;
+			position: absolute;
+			top: 0.22rem;
+			right: 1.25rem;
+		}
+		.fujin_bottom{
+			padding: 0 0.16rem;
+		}
+		.fujin_bottom li{
+			overflow: hidden;
+			margin-top: 0.36rem;
+		}
+		.fujin_bottom li img{
+			width: 1.14rem;
+			height: 0.86rem;
+			float: left;
+		}
+		.fujin_right{
+			width: 3.9rem;
+			height: 100%;
+			float: right;
+		}
+		.fujin_right h4{
+			font-size: 0.22rem;
+			float: left;
+			color: #333;
+			margin-top: -0.11rem;
+		}
+		.more{
+			float: right;
+			font-family: 'iconfont';
+			font-size: 0.22rem;
+			color: #ccc;
+			line-height: 0.3rem;
+			margin-left: 0.37rem;
+		}
+		.star{
+			font-size: 0.14rem;
+			color: #FFD161;
+			font-family: 'iconfont';
+			float: left;
+		}
+		.star_leavel{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+		}
+		.yue{
+			font-size: 0.17rem;
+			color: #999;
+			float: left;
+			margin-left: 0.12rem;
+		}
+		.lu{
+			font-size: 0.17rem;
+			color: #999;
+			float: right;
+		}
+		.peisong{
+			width: 100%;
+			font-size: 0.17rem;
+			color: #999;
+			float: left;
+		}
+		.tian{
+			width: 100%;
+			float: left;
+			font-size: 0.17rem;
+			line-height: 0.45rem;
+			color: #333;
+		}
+		.tian em{
+			float: left;
+			font-family: 'iconfont';
+			font-size: 0.16rem;
+			color: #999;
+		}
+		.count{
+			width: 100%;
+			height: 0.22rem;
+			float: left;
+		}
+		.zhe{
+			width: 0.67rem;
+			height: 0.2rem;
+			border: 0.02rem solid #FDE0DF;
+			color:#FB4E44;
+			text-align: center;
+			line-height: 0.15rem;
+			font-size: 0.12rem; 
+			float: left;
+			margin-right: 0.07rem;
+		}
+		.bar{
+			width: 100%;
+			height: 0.74rem;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			background-color: #fff;
+			border-top: 0.02rem solid #ccc;
+		}
+		.bar li{
+			width: 1.78rem;
+			height: 100%;
+			float: left;
+			padding-top: 0.12rem;
+		}
+		#em_active{
+			color: #FFC43F;
+		}
+		#span_active{
+			color: #333;
+		}
+		.bar li em{
+			font-family: 'iconfont';
+			font-size: 0.32rem;
+			float: left;
+			margin-left: 0.74rem;
+			color: #ccc;
+		}
+		.bar li span{
+			font-size: 0.15rem;
+			text-align: center;
+			color: #ccc;
+			float: left;
+			margin-left: 0.74rem;
+		}
+		.shop{
+			width: 0.58rem;
+			height: 0.58rem;
+			border-radius: 50%;
+			border: 0.01rem solid #ccc;
+			position: fixed;
+			right: 0.21rem;
+			bottom: 1.05rem; 
+			font-size: 0.27rem;
+			color: #333;
+			line-height: 0.58rem;
+			text-align: center;
+			font-family: 'iconfont';
+			background-color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header_top">
+			<em class="dingwei">&#xe647;</em>
+			<span class="position">凯通大厦</span>
+			<em class="right">&#xe639;</em>
+			<em class="message">&#xe629;</em>
+			<em class="sun">&#xe64c;</em>
+			<div class="weather">
+				<span class="weather_word">晴</span>
+				<span class="wendu">23℃</span>
+			</div>
+		</div>
+		<input type="text" placeholder="炸鸡">
+		<em class="search">&#xe78d;</em>
+	</header>
+	<main class="banner">
+		<img src="img/Screenshot_2018-04-17-15-11-33-84_02.png" alt="">
+	</main>
+	<ul class="list">
+		<li>
+			<img src="img/Screenshot_2018-04-10-09-16-05-19_03.png" alt="">
+			<span class="list_word">美食</span>
+		</li>
+		<li>
+			<img src="img/Screenshot_2018-04-17-15-11-33-84_05.png" alt="">
+			<span class="list_word">美团超市</span>
+		</li>
+		<li>
+			<img src="img/Screenshot_2018-04-17-15-11-33-84_07.png" alt="">
+			<span class="list_word">生鲜果蔬</span>
+		</li>
+		<li>
+			<img src="img/Screenshot_2018-04-17-15-11-33-84_09.png" alt="">
+			<span class="list_word">美团专送</span>
+		</li>
+		<li>
+			<img src="img/Screenshot_2018-04-17-15-11-33-84_11.png" alt="">
+			<span class="list_word">跑腿代购</span>
+		</li>
+		<li>
+			<img src="img/Screenshot_2018-04-17-15-11-33-84_18.png" alt="">
+			<span class="list_word">下午茶</span>
+		</li>
+		<li>
+			<img src="img/Screenshot_2018-04-17-15-11-33-84_20.png" alt="">
+			<span class="list_word">汉堡披萨</span>
+		</li>
+		<li>
+			<img src="img/Screenshot_2018-04-17-15-11-33-84_21.png" alt="">
+			<span class="list_word">快食简餐</span>
+		</li>
+		<li>
+			<img src="img/Screenshot_2018-04-17-15-11-33-84_22.png" alt="">
+			<span class="list_word">家常菜</span>
+		</li>
+		<a href="list.html">
+			<li>
+				<img src="img/Screenshot_2018-04-17-22-25-07-38_03.png" alt="">
+				<span class="list_word">全部分类</span>
+			</li>
+		</a>
+	</ul>
+	<section class="youhui">
+		<h1>优惠专区</h1>
+		<img src="img/Screenshot_2018-04-17-15-11-33-84_30.png" alt="">
+		<img src="img/Screenshot_2018-04-17-15-11-43-19_03.png" alt="">
+		<img src="img/Screenshot_2018-04-17-15-11-43-19_07.png" alt="">
+		<img src="img/Screenshot_2018-04-17-15-11-43-19_09.png" alt="">
+		<img src="img/Screenshot_2018-04-17-15-11-43-19_11.png" alt="">
+		<img src="img/Screenshot_2018-04-17-15-11-43-19_13.png" alt="">
+	</section>
+	<section class="youxuan">
+		<h1 class="youxuan_title">为你优选</h1>
+		<em class="right right1">&#xe639;</em>
+		<h2>更多</h2>
+		<ul class="youxuan_box">
+			<li>
+				<img src="img/Screenshot_2018-04-17-15-11-43-19_03 (2).png" alt="">
+				<p>附近热卖商家</p>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-15-11-43-19_05.png" alt="">
+				<p>明星林心如曾光顾</p>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-15-11-43-19_03 (2).png" alt="">
+				<p>附近热卖商家</p>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-15-11-43-19_05.png" alt="">
+				<p>明星林心如曾光顾</p>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-15-11-43-19_03 (2).png" alt="">
+				<p>附近热卖商家</p>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-15-11-43-19_05.png" alt="">
+				<p>明星林心如曾光顾</p>
+			</li>
+		</ul>
+	</section>
+	<section class="middle">
+		<img src="img/Screenshot_2018-04-17-15-11-50-68_02.png" alt="">
+	</section>
+	<section class="self">
+		<div class="self_title">
+			<h3>到店自取</h3>
+			<span class="self_wenzi">急速取餐 同享优惠</span>
+		</div>
+		<ul class="self_list">
+			<li>
+				<div class="self_content">
+					<h4>叫了只炸鸡（太...</h4>
+					<div class="juli">距您266米</div>
+					<div class="juli1">省2.5元配送费</div>
+					<div class="jian">减</div>
+					<div class="jian jian1">折</div>
+					<div class="jian jian2">领</div>
+					<div class="jian jian3">返</div>
+					<div class="jian jian4">首</div>
+				</div>
+			</li>
+			<li>
+				<div class="self_content">
+					<h4>叫了只炸鸡（太...</h4>
+					<div class="juli">距您266米</div>
+					<div class="juli1">省2.5元配送费</div>
+					<div class="jian">减</div>
+					<div class="jian jian1">折</div>
+					<div class="jian jian2">领</div>
+					<div class="jian jian3">返</div>
+					<div class="jian jian4">首</div>
+				</div>
+			</li>
+			<li>
+				<div class="self_content">
+					<h4>叫了只炸鸡（太...</h4>
+					<div class="juli">距您266米</div>
+					<div class="juli1">省2.5元配送费</div>
+					<div class="jian">减</div>
+					<div class="jian jian1">折</div>
+					<div class="jian jian2">领</div>
+					<div class="jian jian3">返</div>
+					<div class="jian jian4">首</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<section class="fujin">
+		<h5>附近商家</h5>
+		<ul class="fujin_title">
+			<li id="fujin_list">
+				<span>综合排序</span>
+				<em>&#xe635;</em>
+			</li>
+			<li>
+				<span>销量最高</span>
+			</li>
+			<li>
+				<span>距离最近</span>
+			</li>
+			<li>
+				<span>筛选</span>
+				<em>&#xe616;</em>
+			</li>
+		</ul>
+		<ul class="fujin_bottom">
+			<li>
+				<img src="img/Screenshot_2018-04-17-15-12-00-14_03.png" alt="">
+				<div class="fujin_right">
+					<h4>芒不颠千层蛋糕甜品店（长风...</h4>
+					<em class="more">&#xe679;</em>
+					<div class="star_leavel">
+						<em class="star">&#xe698;&#xe698;&#xe698;&#xe698;&#xe698;</em>
+						<span class="yue">月售407</span>
+						<span class="lu">54分钟|1.3km</span>
+					</div>
+					<span class="peisong">起送 ￥20 | 配送 ￥3</span>
+					<span class="tian">
+						<em>&#xe601;</em>&nbsp;甜品
+					</span>
+					<div class="count">
+						<div class="zhe">4.95折起</div>
+						<div class="zhe">返3元券</div>
+						<div class="zhe">首单减13元</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-15-12-00-14_03.png" alt="">
+				<div class="fujin_right">
+					<h4>芒不颠千层蛋糕甜品店（长风...</h4>
+					<em class="more">&#xe679;</em>
+					<div class="star_leavel">
+						<em class="star">&#xe698;&#xe698;&#xe698;&#xe698;&#xe698;</em>
+						<span class="yue">月售407</span>
+						<span class="lu">54分钟|1.3km</span>
+					</div>
+					<span class="peisong">起送 ￥20 | 配送 ￥3</span>
+					<span class="tian">
+						<em>&#xe601;</em>&nbsp;甜品
+					</span>
+					<div class="count">
+						<div class="zhe">4.95折起</div>
+						<div class="zhe">返3元券</div>
+						<div class="zhe">首单减13元</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<img src="img/Screenshot_2018-04-17-15-12-00-14_03.png" alt="">
+				<div class="fujin_right">
+					<h4>芒不颠千层蛋糕甜品店（长风...</h4>
+					<em class="more">&#xe679;</em>
+					<div class="star_leavel">
+						<em class="star">&#xe698;&#xe698;&#xe698;&#xe698;&#xe698;</em>
+						<span class="yue">月售407</span>
+						<span class="lu">54分钟|1.3km</span>
+					</div>
+					<span class="peisong">起送 ￥20 | 配送 ￥3</span>
+					<span class="tian">
+						<em>&#xe601;</em>&nbsp;甜品
+					</span>
+					<div class="count">
+						<div class="zhe">4.95折起</div>
+						<div class="zhe">返3元券</div>
+						<div class="zhe">首单减13元</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<ul class="bar">
+		<li>
+			<em id="em_active">&#xe619;</em>
+			<span id="span_active">首页</span>
+		</li>
+		<li>
+			<em>&#xe897;</em>
+			<span>订单</span>
+		</li>
+		<a href="center.html">
+			<li>
+				<em>&#xe603;</em>
+				<span>我的</span>
+			</li>
+		</a>
+	</ul>
+	<a href="shopcar.html"><div class="shop">&#xe6af;</div></a>
+</body>
+</html>
